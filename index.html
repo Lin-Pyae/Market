@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            
+        
+            
+        }
+        .second{
+           
+            border: 2px solid black;
+        }
+        .first{
+            border: 2px solid black;
+
+        }
+
+        .formInput{
+            margin: 10px;
+            
+        }
+
+        .verticalC{
+            min-height: 80vh;
+           display: flex;
+           align-items: center;
+          
+        }
+        
+        .emailContainer{
+            margin-left: 43px;
+        }
+
+        .addressContainer{
+            margin-left: 30px;
+        }
+        .shopnameContainer{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="verticalC">
+        <div class="card">
+
+            <div class="first">
+                <h1>helo</h1>
+            </div>
+            <div class="second">
+                <form action="" id="loginform">
+                    <div class="nameContainer formInput">
+                        <label>User Name :</label>
+                        <input type="text" name="userName" required>
+                    </div>
+            
+                    <div class="emailContainer formInput">
+                        <label>Email :</label>
+                        <input type="email" name="email" required>
+                    </div>
+            
+                    <div class="addressContainer formInput">
+                        <label for="">Address :</label>
+                        <input type="text" name="address" required>
+                    </div>
+                    
+                    <div id="usr_role" class="formInput" style="text-align:center;">
+                        <label for="owner">Owner </label>
+                        <input type="radio" name="role" id="owner" required>
+                        <label for="customer">Customer </label>
+                        <input type="radio" name="role" id="customer" required>
+                    </div>
+
+                    <div class="btnContainer formInput" style="text-align:center;">
+                        <input type="submit" value="submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <script>
+        let owner = document.querySelector("#owner");
+        let customer = document.getElementById("customer");
+        let text = document.createTextNode("Shop Name: ");
+        let shopName = document.createElement("input");
+        let shopNameC = document.createElement("div");
+        let shopLabel = document.createElement("label");
+        let usr_role= document.getElementById("usr_role")
+        owner.addEventListener('click',()=>{
+            console.dir(shopName);
+            shopLabel.append(text);
+            shopName.setAttribute('type','text');
+            shopName.setAttribute('name','shopName');
+            shopName.setAttribute("required", "");
+            shopNameC.classList.add("formInput","shopnameContainer");
+            shopNameC.append(shopLabel);
+            shopNameC.appendChild(shopName);
+            usr_role.appendChild(shopNameC);
+        })
+
+        customer.addEventListener('click',()=>{
+            shopLabel.remove();
+            shopNameC.remove();
+        })
+    </script>
+</body>
+</html>
