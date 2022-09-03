@@ -1,0 +1,73 @@
+p{
+    font-size: 16px;
+}
+
+.navborder{
+    border-bottom: 1px solid rgb(226 220 220);
+}
+
+.quantity_items{
+    padding: 5px 15px;
+    background-color: pink;
+}
+
+#quantity_container{
+    display: flex;
+    
+}
+
+#dbtn{
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+#ibtn{
+    border-top-right-radius:5px ;
+    border-bottom-right-radius: 5px;
+}
+
+.pink-ka{
+    background-color: pink;
+    color: black;
+    border: 0;
+    
+}
+
+.pink-ka:hover{
+    background-color: hsl(325, 73%, 66%);
+}
+
+#percent{
+    color: hsl(320, 76%, 61%);
+    background-color: hsla(325, 90%, 72%, 0.281);
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.thumbnail{
+   border-radius: 10px;
+   width: 20%;
+   margin-right: 25px;
+}
+
+.main-img{
+    border-radius: 10px;
+}
+
+.thumbnail:hover{
+    cursor: pointer;
+    border: 2px solid pink;
+    opacity: .5;
+}
+
+.delcontainer{
+    display: none;
+}
+
+.displayDel:hover .delcontainer{
+    display: block;
+}
+
+.quan{
+    width: 50px;
+}

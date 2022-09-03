@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Details</title>
+    <link rel="icon" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./item_details.css">
+
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+</head>
+<body>
+  
+    <!-- navigation -->
+
+  <nav class="navbar navbar-expand-lg bg-light">
+    
+    <a class="navbar-brand ms-lg-5" href="#">Logo</a>
+
+    
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+   
+    
+
+    
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class=" m-auto d-lg-flex">
+        <ul class="navbar-nav  mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Shop</a>
+          </li>     
+        </ul>
+        <form class="d-flex ms-lg-5" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>  
+
+        <div class=" d-flex align-items-center ms-sm-5 d-lg-none">      
+            <i class="bi bi-cart3 align-self-center" style="font-size:30px;"></i>         
+          <div class="dropdown">
+            <a class=" d-block" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class=" ms-5 dropdown" style="border-radius: 50%; background-image:url(./wolf.jpg); width: 40px; height: 40px; background-size: contain;">  </div> 
+            </a>
+            <ul class="dropdown-menu" >
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+         </div>
+
+        </div>
+      </div>
+
+      
+     
+    
+    
+
+    
+   
+    
+     <div class="  align-items-center ms-sm-5  d-lg-flex  d-none me-lg-5">
+
+
+      <button type="button" class="btn  position-relative"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+        <i class="bi bi-cart3 align-self-center" style="font-size:30px;"></i>
+        <span class="position-absolute  start-100 translate-middle badge rounded-pill bg-danger" style="top: 17px;" id="cart_items">
+          0
+        </span>
+      </button> 
+
+
+
+     
+<!-- one offcanvas here -->
+
+
+         
+      
+      
+
+
+
+
+
+
+
+      <div class="dropdown">
+        <a class=" d-block" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <div class=" ms-5 dropdown" style="border-radius: 50%; background-image:url(./wolf.jpg); width: 40px; height: 40px; background-size: contain;">  </div> 
+        </a>
+        <ul class="dropdown-menu" style="margin-left: -66px;">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+
+      
+      
+    </div>
+  
+</nav>
+
+<!-- navigation -->
+
+
+
+
+
+<!-- another offcanvas here -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Your Cart</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body" id="cart-body">
+    <div id="order-submit">
+
+        <div class=" d-flex justify-content-around fw-bolder fs-5">
+          <div>Product</div> 
+          <div for="">Price</div>
+          <div for="">Quantity</div>
+          <div for="">Total</div>
+        </div>
+
+    </div>
+    <div class=" d-flex justify-content-between">
+      <h5>Total</h5>
+      <p id="finalTotal"></p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+    <div class="container-fluid">
+      <div class="row justify-content-center align-items-center mt-4">
+
+
+        <div class="col-sm-12 d-lg-none d-md-none d-sm-block p-0">
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./images/image-product-1.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./images/image-product-2.jpg" class="d-block w-100" alt="...">
+              </div>
+              
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+
+
+
+        <div class="col-lg-4 d-sm-none d-lg-block d-md-block">
+          <div>
+            <div>
+              <img src="./pinkcake1.jpg" class=" w-100 main-img" alt="">
+            </div>
+      
+            <div class=" d-flex mt-4 justify-content-center">
+              <img src="./pinkcake1.jpg" class="  thumbnail t-1" alt="">
+              <img src="./cake2.jpg" class="  thumbnail t-2" alt="">  
+            </div>
+
+          </div>
+          
+        </div>
+
+        <div class=" col-lg-1"></div>
+
+        <div class="col-lg-4">
+          <h6 class=" fw-bold" style="color: #EE6983;font-size: 12px;">Cakie</h6>
+
+          <h1 class=" fs-2 fw-bolder" id="product-name">Pink Cake</h1>
+
+          <p class=" text-black-50 mt-4" style="font-size: 13px;">
+            These low-profile sneakers are your perfect casual wear companion. Featuring a 
+            durable rubber outer sole, they’ll withstand everything the weather can offer.
+          </p>
+
+          <div class=" mb-4">
+            <label class=" fw-bolder fs-4">$<span id="product_price">125.00</span></label>
+            <label id="percent" class=" px-1 ms-1"> <b class=" fa-fw">50%</b></label>
+            <div style="font-size: 14px;" class=" text-black-50 fw-bold">$250.00</div>
+          </div>
+
+          <div class=" container-fluid" style="padding: 0;">
+            <div class="row g-5">
+              <div id="quantity_container" class=" col-4 align-self-center">
+                <button onclick="decrease()" class="quantity_items" id="dbtn" style="border:none;"><i class="bi bi-dash fs-5 fw-bolder"></i></button>
+                <label id="quantity" class="quantity_items">0</label>
+                <button onclick="increase()" class="quantity_items" id="ibtn" style="border:none;"><i class="bi bi-plus fs-5 fw-bolder"></i></button>
+              </div>
+              <div class=" col">
+                <button class=" m-1  pink-ka  w-100 rounded-3" id="addtoCart">
+                  <i class="bi bi-cart"></i>
+                  Add to cart</button>
+              </div>
+            </div>
+            
+          </div>
+            
+
+
+            
+          
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./item_details.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
