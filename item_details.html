@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./item_details.css">
+    <link rel="stylesheet" href="./profile.css">
 
     <!-- <link rel="stylesheet" href="./css/style.css"> -->
 </head>
@@ -16,9 +17,11 @@
   
     <!-- navigation -->
 
-  <nav class="navbar navbar-expand-lg bg-light">
+  <nav class="navbar navbar-expand-lg position-fixed w-100 " style="background-color:#f1f1f1; z-index: 1500; top: 0;">
     
-    <a class="navbar-brand ms-lg-5" href="#">Logo</a>
+    <a class="navbar-brand ms-lg-5" href="#">
+     LOGO
+    </a>
 
     
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,14 +46,14 @@
         </ul>
         <form class="d-flex ms-lg-5" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button class="search" type="submit">Search</button>
         </form>  
 
         <div class=" d-flex align-items-center ms-sm-5 d-lg-none">      
             <i class="bi bi-cart3 align-self-center" style="font-size:30px;"></i>         
           <div class="dropdown">
             <a class=" d-block" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <div class=" ms-5 dropdown" style="border-radius: 50%; background-image:url(./wolf.jpg); width: 40px; height: 40px; background-size: contain;">  </div> 
+              <div class=" ms-5 dropdown" style="border-radius: 50%; background-image:url(./avatar.png); width: 40px; height: 40px; background-size: contain;">  </div> 
             </a>
             <ul class="dropdown-menu" >
               <li><a class="dropdown-item" href="#">Action</a></li>
@@ -74,6 +77,7 @@
      <div class="  align-items-center ms-sm-5  d-lg-flex  d-none me-lg-5">
 
 
+<!-- one offcanvas here -->
       <button type="button" class="btn  position-relative"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
         <i class="bi bi-cart3 align-self-center" style="font-size:30px;"></i>
         <span class="position-absolute  start-100 translate-middle badge rounded-pill bg-danger" style="top: 17px;" id="cart_items">
@@ -84,27 +88,15 @@
 
 
      
-<!-- one offcanvas here -->
-
-
-         
-      
-      
-
-
-
-
-
-
 
       <div class="dropdown">
         <a class=" d-block" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <div class=" ms-5 dropdown" style="border-radius: 50%; background-image:url(./wolf.jpg); width: 40px; height: 40px; background-size: contain;">  </div> 
+          <div class=" ms-5 dropdown" style="border-radius: 50%; background-image:url(./avatar.png); width: 40px; height: 40px; background-size: contain;">  </div> 
         </a>
         <ul class="dropdown-menu" style="margin-left: -66px;">
           <li><a class="dropdown-item" href="#">Action</a></li>
           <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <li><a class="dropdown-item" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Profile</a></li>
         </ul>
       </div>
 
@@ -121,10 +113,10 @@
 
 
 <!-- another offcanvas here -->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" style="z-index: 6000;">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasRightLabel">Your Cart</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" ></button>
   </div>
   <div class="offcanvas-body" id="cart-body">
     <div id="order-submit">
@@ -145,12 +137,66 @@
 </div>
 
 
+<!-- profile offcanvas here -->
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel" style="z-index: 6000;">
+  <div class="offcanvas-header cv">
+    <h5 class="offcanvas-title " id="offcanvasWithBothOptionsLabel">My Profile</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body main">
+    
+      
+    
+    <img src="cake girl.jpg" style="margin:auto ;" class=" mb-5 p-img"><br>
+    
+      
+      
+      <table style="margin: auto;" class=" mb-5">
+        <tr><th><label>Name</label></th>
+          <td>
+      Marry</td>
+      </tr>
+  
+      <tr><th><label>E-mail</label></th>
+        <td>
+      marry@gmail.com</td>
+      </tr>
+  
+      <tr><th><label>Phone No.</label></th>
+        <td>
+      +95 7345260</td>
+      </tr>
+  
+      <tr><th><label>Address</label></th>
+        <td>Blah Blah
+      </td>
+      </tr>
+  
+      <tr><th><label>Favourites</label></th>
+        <td>
+      <input  type="button" name="fav" value="view">
+      </td>
+      </tr>
+  
+      <tr><th><label>Points</label></th>
+        <td>
+      50</td>
+      </tr></table>
+      <table class="buttons">
+      </table>
+  
+      <span style="margin: auto;"><input type="button" name="edit" value="Edit">
+    <input type="button" name="back" value="Back"></span>
+    
+    
+  </div>
+</div>
 
 
-
+<br><br>
 
     <div class="container-fluid">
-      <div class="row justify-content-center align-items-center mt-4">
+      <div class="row justify-content-center align-items-center mt-5">
 
 
         <div class="col-sm-12 d-lg-none d-md-none d-sm-block p-0">
@@ -181,7 +227,7 @@
 
         <div class="col-lg-4 d-sm-none d-lg-block d-md-block">
           <div>
-            <div>
+            <div >
               <img src="./pinkcake1.jpg" class=" w-100 main-img" alt="">
             </div>
       
@@ -220,7 +266,7 @@
                 <button onclick="increase()" class="quantity_items" id="ibtn" style="border:none;"><i class="bi bi-plus fs-5 fw-bolder"></i></button>
               </div>
               <div class=" col">
-                <button class=" m-1  pink-ka  w-100 rounded-3" id="addtoCart">
+                <button class=" m-1  pink-ka  w-100 rounded-3" id="addtoCart" style="padding: 8px;">
                   <i class="bi bi-cart"></i>
                   Add to cart</button>
               </div>

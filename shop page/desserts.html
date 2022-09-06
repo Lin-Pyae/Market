@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Buy with</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="../item_details.css">
+<link rel="stylesheet" href="../profile.css">
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+.name {
+  vertical-align: middle;
+  width: 100px;
+  height: 450px;
+  border-radius: 2%;
+}
+.img {
+  border: 5px solid #CEAB93;
+}
+</style>
+</head>
+<body class="w3-content" style="max-width:2000px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-light-grey w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <h3 class="w3-wide"><b>LOGO</b></h3>
+  </div>
+  <div class="w3-padding-64 w3-large w3-text-black" style="font-weight:bold">
+    <a href="buy with(shop).html" class="w3-bar-item w3-button">Birthday Cakes</a>
+    <a href="cupcakes.html" class="w3-bar-item w3-button">Cupcakes</a>
+    <a href="desserts.html" class="w3-bar-item w3-button w3-pink">Desserts</a>
+    <a href="macrons.html" class="w3-bar-item w3-button">Macrons</a>
+    <a href="toppers.html" class="w3-bar-item w3-button">Toppers</a>
+   
+  </div>
+  <a href="#contact"><i class="fa fa-fw fa-envelope w3-pink"></i> Contact Us</a>
+  <a href="#footer"  class="w3-bar-item w3-button w3-padding"></a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide">LOGO</div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- navigation -->
+
+<nav class="navbar navbar-expand-lg position-fixed w-100 " style="background-color:#f1f1f1; z-index: 1500; top: 0;">
+    
+   
+    
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="  d-lg-flex">
+    <ul class="navbar-nav  mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">
+          Home
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Shop</a>
+      </li>     
+    </ul>
+    <form class="d-flex ms-lg-5" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="search" type="submit">Search</button>
+    </form>  
+
+    <div class=" d-flex align-items-center ms-sm-5 d-lg-none">      
+      <button type="button" class="btn  position-relative"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+        <i class="bi bi-cart3 align-self-center" style="font-size:30px;"></i>
+        <span class="position-absolute  start-100 translate-middle badge rounded-pill bg-danger" style="top: 17px;" id="cart_items">
+          0
+        </span>
+      </button>        
+      <div class="dropdown">
+        <a class=" d-block" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <div class=" ms-5 dropdown" style="border-radius: 50%; background-image:url(../cake\ girl.jpg); width: 40px; height: 40px; background-size: contain;">  </div> 
+        </a>
+        <ul class="dropdown-menu" >
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+     </div>
+
+    </div>
+  </div>
+
+  
+ 
+
+
+
+
+
+
+ <div class="  align-items-center ms-sm-5  d-lg-flex  d-none me-lg-5">
+
+
+  <button type="button" class="btn  position-relative"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+    <i class="bi bi-cart3 align-self-center" style="font-size:30px;"></i>
+    <span class="position-absolute  start-100 translate-middle badge rounded-pill bg-danger" style="top: 17px;" id="cart_items">
+      0
+    </span>
+  </button> 
+
+
+
+ 
+<!-- one offcanvas here -->
+
+
+     
+  
+  
+
+
+
+
+
+
+
+  <div class="dropdown" style="margin-right: 243px;">
+    <a class=" d-block" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <div class=" ms-5 dropdown" style="border-radius: 50%; background-image:url(../cake\ girl.jpg); width: 40px; height: 40px; background-size: contain;">  </div> 
+    </a>
+    <ul class="dropdown-menu" style="margin-left: -66px;">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Profile</a></li>
+    </ul>
+  </div>
+
+  
+  
+</div>
+
+</nav>
+
+<!-- navigation -->
+
+
+
+
+
+<!-- another offcanvas here -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" style="z-index: 6000;">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="offcanvasRightLabel">Your Cart</h5>
+<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" ></button>
+</div>
+<div class="offcanvas-body" id="cart-body">
+<div id="order-submit">
+
+    <div class=" d-flex justify-content-around fw-bolder fs-5">
+      <div>Product</div> 
+      <div for="">Price</div>
+      <div for="">Quantity</div>
+      <div for="">Total</div>
+    </div>
+
+</div>
+<div class=" d-flex justify-content-between">
+  <h5>Total</h5>
+  <p id="finalTotal"></p>
+</div>
+</div>
+</div>
+
+<!-- profile offcanvas here -->
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel" style="z-index: 6000;">
+  <div class="offcanvas-header cv">
+    <h5 class="offcanvas-title " id="offcanvasWithBothOptionsLabel">My Profile</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body main">
+    
+      
+    
+    <img src="../cake girl.jpg" style="margin:auto ;" class=" mb-5 p-img"><br>
+    
+      
+      
+      <table style="margin: auto;" class=" mb-5">
+        <tr><th><label>Name</label></th>
+          <td>
+      Marry</td>
+      </tr>
+  
+      <tr><th><label>E-mail</label></th>
+        <td>
+      marry@gmail.com</td>
+      </tr>
+  
+      <tr><th><label>Phone No.</label></th>
+        <td>
+      +95 7345260</td>
+      </tr>
+  
+      <tr><th><label>Address</label></th>
+        <td>Blah Blah
+      </td>
+      </tr>
+  
+      <tr><th><label>Favourites</label></th>
+        <td>
+      <input  type="button" name="fav" value="view">
+      </td>
+      </tr>
+  
+      <tr><th><label>Points</label></th>
+        <td>
+      50</td>
+      </tr></table>
+      <table class="buttons">
+      </table>
+  
+      <span style="margin: auto;"><input type="button" name="edit" value="Edit">
+    <input type="button" name="back" value="Back"></span>
+    
+    
+  </div>
+</div>
+
+
+
+
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Image header -->
+  <div class="w3-display-container w3-container w3-black">
+    <img src="shop.jpg" alt="Cake" style="width:100%" class="name">
+    <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
+      <h1 class="w3-jumbo w3-hide-small">Shop Name</h1>
+      <h1 class="w3-hide-large w3-hide-medium">Shop Name</h1>
+      <h1 class="w3-hide-small">fsdklfsdfnsmf</h1>
+    </div>
+  </div>
+   <h1 style="font-family:Georgia; color:#B82C54">Desserts</h1>
+  
+
+  <!-- Product grid -->
+  <div class="w3-row ">
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="desserts1.jpg" class="img" style="width:100%">
+         <div class="w3-display-middle w3-display-hover ">
+            <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart"></i></button>
+          </div>
+      </div>
+        <p><b>Dessert1</b><br><b>3000MMK</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="desserts2.jpg" class="img" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart "></i></button>
+          </div>
+      </div>
+        <p><b>Dessert2</b><br><b>2200MMK</b></p>
+      </div>
+  
+     <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="desserts3.jpg" class="img" style="width:100%">
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart "></i></button>
+          </div>
+        </div>
+        <p><b>Dessert3</b><br><b>3500MMK</b></p>
+      </div>
+    
+      <div class="w3-container">
+         <div class="w3-display-container">
+         <img src="desserts4.jpg" class="img" style="width:100%">
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart "></i></button>
+          </div>
+       </div>
+        <p><b>Dessert4</b><br><b>4000MMK</b></p>
+      </div>
+    </div>
+
+     <div class="w3-col l3 s6">  
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="desserts5.jpg" class="img" style="width:100%">
+        <span class="w3-tag w3-display-topleft w3-yellow">New</span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart "></i></button>
+          </div>
+      </div>
+        <p><b>Dessert5</b><br><b>2500MMK</b></p>
+      </div>
+      
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="desserts6.jpg" class="img" style="width:100%">
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart"></i></button>
+          </div>
+      </div>
+        <p><b>Dessert6</b><br><b class="w3-text-black">2200MMK</b></p>
+      </div>
+  
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="desserts7.jpg" class="img" style="width:100%">
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart "></i></button>
+          </div>
+      </div>
+        <p><b>Dessert7</b><br><b class="w3-text-black">3000MMK</b></p>
+      </div>
+
+      <div class="w3-container">
+       <div class="w3-display-container">
+        <img src="desserts8.jpg" class="img" style="width:100%">
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart "></i></button>
+          </div>
+      </div>
+        <p><b>Dessert8</b><br><b>3100MMK</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="desserts9.jpg" class="img" style="width:100%">
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart "></i></button>
+          </div>
+      </div>
+        <p><b>Dessert9</b><br><b class="w3-text-black">2500MMK</b></p>
+      </div>
+   
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="desserts10.jpg" class="img" style="width:100%">
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart "></i></button>
+          </div>
+      </div>
+        <p><b>Dessert10</b><br><b class="w3-text-black">3500MMK</b></p>
+      </div>
+
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="desserts11.jpg" class="img" style="width:100%">
+         <span class="w3-tag w3-display-topleft w3-yellow">New</span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart"></i></button>
+          </div>
+      </div>
+        <p><b>Dessert11</b><br><b class="w3-text-black">3000MMK</b></p>
+      </div>
+    
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="desserts12.jpg" class="img" style="width:100%">
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart "></i></button>
+          </div>
+         </div>
+        <p><b>Dessert12</b>Cake12<br><b class="w3-text-black">2500MMK</b></p>
+      </div>
+    </div>
+
+     <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="desserts13.jpg" class="img" style="width:100%">
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart "></i></button>
+          </div>
+      </div>
+        <p><b>Dessert13</b><br><b class="w3-text-black">3000MMK</b></p>
+      </div>
+   
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="desserts14.jpg" class="img" style="width:100%">
+        <span class="w3-tag w3-display-topleft w3-yellow">New</span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-pink">Add to cart<i class="fa fa-shopping-cart "></i></button>
+          </div>
+      </div>
+        <p><b>Dessert14</b><br><b class="w3-text-black">2500MMK</b></p>
+      </div>
+
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="desserts15.jpg" class="img" style="width:100%">
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart"></i></button>
+          </div>
+      </div>
+        <p><b>Dessert15</b><br><b class="w3-text-black">3000MMK</b></p>
+      </div>
+    
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="desserts16.jpg" class="img" style="width:100%">
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart "></i></button>
+          </div>
+         </div>
+        <p><b>Dessert16</b><br><b class="w3-text-black">4000MMK</b></p>
+      </div>
+    </div>
+  </div>
+   
+  <!-- Footer -->
+  <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
+    <div class="w3-row-padding">
+      <div class="w3-col s4">
+        <h4>Contact</h4>
+        <p>Questions or review?</p>
+        <form action="/action_page.php" target="_blank">
+          <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Username" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Review" name="Review" required></p>
+          <button type="submit" class="w3-button w3-block w3-pink">Send</button>
+        </form>
+      </div>
+
+      <div class="w3-col s4">
+        <h4>About</h4>
+        <p><a href="#">About us</a></p>
+        <p><a href="#">Help</a></p>
+      </div>
+
+      <div class="w3-col s4 w3-justify">
+        <h4>Store</h4>
+        <p><i class="fa fa-fw fa-map-marker w3-pink"></i> Company Name</p>
+        <p><i class="fa fa-fw fa-phone w3-pink"></i> 00000000</p>
+        <p><i class="fa fa-fw fa-envelope w3-pink"></i> shopname@gmail.com</p>
+        <h4>We accept</h4>
+        <p><i class="fa fa-fw fa-cc-amex w3-pink"></i>Cash on delivery</p>
+        <br>
+        <i class="fa fa-facebook-official w3-hover-opacity w3-large w3-pink"></i>
+        <i class="fa fa-instagram w3-hover-opacity w3-large w3-pink"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-pink"></i>
+        <i class="fa fa-twitter w3-hover-opacity w3-large w3-pink"></i>
+        
+      </div>
+    </div>
+  </footer>
+ </div>
+ 
+
+<!-- Newsletter Modal -->
+
+<script src="../item_details.js"></script>
+
+<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script>
+// Accordion 
+function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Click on the "Jeans" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>

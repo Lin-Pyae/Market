@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Buy with</title>
+<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="../item_details.css">
+<link rel="stylesheet" href="../profile.css">
+<style type="text/css">
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif
+}
+
+.container {
+    margin: 50px auto;
+}
+
+.body {
+    position: relative;
+    width: 720px;
+    height: 940px;
+    margin: 20px auto;
+    border: 1px solid #ffdab9;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   
+}
+
+.text-muted {
+    font-size: 14px;
+}
+
+.container .box {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+    text-decoration: none;
+    color: #ffdab9;
+}
+
+.box:active,
+.box:visited {
+    border: 2px solid #ee82ee;
+}
+
+.box:hover {
+    border: 2px solid #ee82ee;
+}
+
+.btn.btn-primary {
+    background-color: transparent;
+    color: #ee82ee;
+    border: 0px;
+    padding: 0;
+    font-size: 14px;
+}
+
+.btn.btn-primary .fas.fa-chevron-right {
+    font-size: 12px;
+}
+
+.fas.fa-times {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 20px;
+    width: 20px;
+    background-color: #f3cff379;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fas.fa-times:hover {
+    color: #ff0000;
+}
+
+
+.custom-select {
+  position: relative;
+  font-family: Arial;
+  
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: pink;
+  
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #070707;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: pink;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.bg-image {
+  /* The image used */
+  background-image: url("order.jpg");
+  
+ 
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+input[type=text], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border-color: #CD6155;
+  background-color: #F2D7D5;
+}
+a:link, a:visited {
+  /* background-color:#ffffff; */
+  color: #CD6155;
+  padding: 10px 20px;
+  /* text-align: center; */
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  /* background-color: #F2D7D5; */
+}
+</style>
+</head>
+<body>
+
+
+
+  <!-- navigation -->
+
+  <nav class="navbar navbar-expand-lg position-fixed w-100 " style="background-color:#f1f1f1; z-index: 1500; top: 0;">
+    
+    <a class="navbar-brand ms-lg-5" href="#">
+     LOGO
+    </a>
+
+    
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+   
+    
+
+    
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class=" m-auto d-lg-flex">
+        <ul class="navbar-nav  mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Shop</a>
+          </li>     
+        </ul>
+        <form class="d-flex ms-lg-5" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="search" type="submit">Search</button>
+        </form>  
+
+        <div class=" d-flex align-items-center ms-sm-5 d-lg-none">      
+            <i class="bi bi-cart3 align-self-center" style="font-size:30px;"></i>         
+          <div class="dropdown">
+            <a class=" d-block" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class=" ms-5 dropdown" style="border-radius: 50%; background-image:url(../cake\ girl.jpg); width: 40px; height: 40px; background-size: contain;">  </div> 
+            </a>
+            <ul class="dropdown-menu" >
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+         </div>
+
+        </div>
+      </div>
+
+      
+     
+    
+    
+
+    
+   
+    
+     <div class="  align-items-center ms-sm-5  d-lg-flex  d-none me-lg-5">
+
+
+<!-- one offcanvas here -->
+      <button type="button" class="btn  position-relative"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+        <i class="bi bi-cart3 align-self-center" style="font-size:30px;"></i>
+        <span class="position-absolute  start-100 translate-middle badge rounded-pill bg-danger" style="top: 17px;" id="cart_items">
+          0
+        </span>
+      </button> 
+
+
+
+     
+
+      <div class="dropdown">
+        <a class=" d-block" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <div class=" ms-5 dropdown" style="border-radius: 50%; background-image:url(../cake\ girl.jpg); width: 40px; height: 40px; background-size: contain;">  </div> 
+        </a>
+        <ul class="dropdown-menu" style="margin-left: -66px;">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Profile</a></li>
+        </ul>
+      </div>
+
+      
+      
+    </div>
+  
+</nav>
+
+<!-- navigation -->
+
+
+
+
+
+<!-- another offcanvas here -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" style="z-index: 6000;">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Your Cart</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" ></button>
+  </div>
+  <div class="offcanvas-body" id="cart-body">
+    <div id="order-submit">
+
+        <div class=" d-flex justify-content-around fw-bolder fs-5">
+          <div>Product</div> 
+          <div for="">Price</div>
+          <div for="">Quantity</div>
+          <div for="">Total</div>
+        </div>
+
+    </div>
+    <div class=" d-flex justify-content-between">
+      <h5>Total</h5>
+      <p id="finalTotal"></p>
+    </div>
+  </div>
+</div>
+
+
+<!-- profile offcanvas here -->
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel" style="z-index: 6000;">
+  <div class="offcanvas-header cv">
+    <h5 class="offcanvas-title " id="offcanvasWithBothOptionsLabel">My Profile</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body main">
+    
+      
+    
+    <img src="../cake girl.jpg" style="margin:auto ;" class=" mb-5 p-img"><br>
+    
+      
+      
+      <table style="margin: auto;" class=" mb-5">
+        <tr><th><label>Name</label></th>
+          <td>
+      Marry</td>
+      </tr>
+  
+      <tr><th><label>E-mail</label></th>
+        <td>
+      marry@gmail.com</td>
+      </tr>
+  
+      <tr><th><label>Phone No.</label></th>
+        <td>
+      +95 7345260</td>
+      </tr>
+  
+      <tr><th><label>Address</label></th>
+        <td>Blah Blah
+      </td>
+      </tr>
+  
+      <tr><th><label>Favourites</label></th>
+        <td>
+      <input  type="button" name="fav" value="view">
+      </td>
+      </tr>
+  
+      <tr><th><label>Points</label></th>
+        <td>
+      50</td>
+      </tr></table>
+      <table class="buttons">
+      </table>
+  
+      <span style="margin: auto;"><input type="button" name="edit" value="Edit">
+    <input type="button" name="back" value="Back"></span>
+    
+    
+  </div>
+</div>
+
+
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+<div class="container">
+
+        <div class="body  bg-image">
+        	
+  <h2>Select options</h2>
+
+<form action="">
+<br><br>
+<div class="custom-select" style="width:200px;">
+  <select>
+    <option value="0">Choose flavour:</option>
+    <option value="Chocolate">Chocolate</option>
+    <option value="Strawberry">Strawberry</option>
+    <option value="Vanilla">Vanilla</option>
+    <option value="Raspberry">Raspberry</option>
+    <option value="Blueberry">Blueberry</option>
+    <option value="Vanilla">Vanilla</option>
+    <option value="Cheese">Cheese</option>
+  </select>
+</div>
+  <br><br>
+  <div class="custom-select" style="width:200px;">
+  <select>
+    <option value="0">Choose Cake Type:</option>
+    <option value="Chiffon">Chiffon</option>
+    <option value="Sponge">Sponge</option>
+    <option value="Layer">Layer</option>
+    <option value="Mousse">Mousse</option>
+  </select>
+</div>
+  <br>
+  <br>
+  <div class="custom-select" style="width:200px;">
+  <select>
+    <option value="0">Choose size:</option>
+    <option value="4inches">4inches</option>
+    <option value="6inches">6inches</option>
+    <option value="8inches">8inches</option>
+    <option value="10inches">10inches</option>
+    <option value="12inches">12inches</option>
+  </select>
+</div>
+<br><br>
+    <div class="custom-select" style="width:200px;">
+  
+  <select>
+    <option value="0">Choose Topping:</option>
+    <option value="Jelly">Jelly</option>
+    <option value="Fruit">Fruit</option>
+    <option value="Cheese">Cheese</option>
+    <option value="Cream Cheese">Cream Cheese</option>
+    <a href="toppers.html"></a><option value="Oreo">Oreo</option></a>
+  </select>
+</div>
+<a href="toppers.html" target="_blank">Toppers for cake</a>
+   <br><br>
+   <label for="Description" color="#F2D7D5">Description:</label>
+    <input type="text" id="description" name="description" placeholder="Any Description...">
+  <br><br>
+  <a href="#" target="_blank">Add to cart<i class="fa fa-shopping-cart "></i></a>
+  <br><br>
+  
+
+</div>
+</form>
+
+
+
+<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+
+       <script>
+var x, i, j, l, ll, selElmnt, a, b, c;
+/*look for any elements with the class "custom-select":*/
+x = document.getElementsByClassName("custom-select");
+l = x.length;
+for (i = 0; i < l; i++) {
+  selElmnt = x[i].getElementsByTagName("select")[0];
+  ll = selElmnt.length;
+  /*for each element, create a new DIV that will act as the selected item:*/
+  a = document.createElement("DIV");
+  a.setAttribute("class", "select-selected");
+  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+  x[i].appendChild(a);
+  /*for each element, create a new DIV that will contain the option list:*/
+  b = document.createElement("DIV");
+  b.setAttribute("class", "select-items select-hide");
+  for (j = 1; j < ll; j++) {
+    /*for each option in the original select element,
+    create a new DIV that will act as an option item:*/
+    c = document.createElement("DIV");
+    c.innerHTML = selElmnt.options[j].innerHTML;
+    c.addEventListener("click", function(e) {
+        /*when an item is clicked, update the original select box,
+        and the selected item:*/
+        var y, i, k, s, h, sl, yl;
+        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+        sl = s.length;
+        h = this.parentNode.previousSibling;
+        for (i = 0; i < sl; i++) {
+          if (s.options[i].innerHTML == this.innerHTML) {
+            s.selectedIndex = i;
+            h.innerHTML = this.innerHTML;
+            y = this.parentNode.getElementsByClassName("same-as-selected");
+            yl = y.length;
+            for (k = 0; k < yl; k++) {
+              y[k].removeAttribute("class");
+            }
+            this.setAttribute("class", "same-as-selected");
+            break;
+          }
+        }
+        h.click();
+    });
+    b.appendChild(c);
+  }
+  x[i].appendChild(b);
+  a.addEventListener("click", function(e) {
+      /*when the select box is clicked, close any other select boxes,
+      and open/close the current select box:*/
+      e.stopPropagation();
+      closeAllSelect(this);
+      this.nextSibling.classList.toggle("select-hide");
+      this.classList.toggle("select-arrow-active");
+    });
+}
+function closeAllSelect(elmnt) {
+  /*a function that will close all select boxes in the document,
+  except the current select box:*/
+  var x, y, i, xl, yl, arrNo = [];
+  x = document.getElementsByClassName("select-items");
+  y = document.getElementsByClassName("select-selected");
+  xl = x.length;
+  yl = y.length;
+  for (i = 0; i < yl; i++) {
+    if (elmnt == y[i]) {
+      arrNo.push(i)
+    } else {
+      y[i].classList.remove("select-arrow-active");
+    }
+  }
+  for (i = 0; i < xl; i++) {
+    if (arrNo.indexOf(i)) {
+      x[i].classList.add("select-hide");
+    }
+  }
+}
+/*if the user clicks anywhere outside the select box,
+then close all select boxes:*/
+document.addEventListener("click", closeAllSelect);
+</script>     
+    </body>

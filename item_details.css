@@ -48,10 +48,14 @@ p{
    border-radius: 10px;
    width: 20%;
    margin-right: 25px;
+   height: 120px;
+   object-fit: cover;
 }
 
 .main-img{
     border-radius: 10px;
+   height: 425px;
+   object-fit: cover;
 }
 
 .thumbnail:hover{
@@ -70,4 +74,9 @@ p{
 
 .quan{
     width: 50px;
+}
+
+.search{
+    border: 2px solid rgb(103 103 103);
+    border-radius: 6px;
 }
