@@ -65,7 +65,7 @@ addtoCart.addEventListener('click',(e)=>{
   let quantity = parseInt(i.innerHTML)
   
   if(quantity === 0){
-    cartItems.innerText= 0;
+    cartItems.innerText= quantity_on_cart + quantity;
   }
 
   else{
@@ -73,23 +73,33 @@ addtoCart.addEventListener('click',(e)=>{
     
     //add to cart body
     let div = document.createElement("div");
-    
+    let product_nameIn_cart = document.getElementsByClassName("product_nameIn_cart");
+
+
+    for (const x of product_nameIn_cart) {
+      if(product_name === x.innerHTML){
+        x.parentNode.parentNode.querySelector(".quan").value = parseInt(x.parentNode.parentNode.querySelector(".quan").value) + parseInt(i.innerText);
+        x.parentNode.parentNode.querySelector(".total").innerHTML = parseInt(x.parentNode.parentNode.querySelector(".quan").value) * parseInt(product_price);
+        calTotal();
+        return;
+      }
+    }
+
    
-  
+    console.log("Hello World");
     div.classList.add("d-flex","justify-content-around","my-3", "displayDel");
     div.innerHTML = `            
                                 <div>
-                                ${product_name}
+                               <div class="product_nameIn_cart">${product_name}</div>
                                 <div class="delcontainer">
                                 <button class=" btn btn-sm btn-danger" onclick="cancel(this)">Cancel</button>
                                 </div>                               
                                 </div> 
-                                <div>${ parseInt(product_price)}</div>
-                                <div> 
-                                 
-                                <input class="quan" type="number" min="0" value="${parseInt(i.innerText)}" onclick="quan(this)"/>
-                                
 
+                                <div>${ parseInt(product_price)}</div>
+
+                                <div>                        
+                                <input class="quan" type="number" min="0" value="${parseInt(i.innerText)}" onclick="quan(this)"/>
                                 </div>
 
                                 <div class="total">${parseInt(product_price)*parseInt(i.innerText)}</div>
@@ -97,6 +107,8 @@ addtoCart.addEventListener('click',(e)=>{
                             order_submit.append(div); 
                             
   calTotal();
+  
+
   }
   
   
