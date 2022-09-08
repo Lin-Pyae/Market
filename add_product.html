@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="node_modules/shop_update.css">
+  <title>Upload Item</title></head>
+  <body>
+  	
+<form>
+	<div class="box">
+    <div class="homeBtn"><a href="Admin Dashboard.html"><img src="./shop page/home icon.png" title="Go to home page"></a></div>
+		<img id="image" style="width: 200px;height: 200px;background-image: url(./shop\ page/icon.png);background-size: cover;border:none;"><br>
+	<input type="text" name="product_name" placeholder="Enter Product Name"><br>
+    <input type="text" name="qty" placeholder="Enter QTY"><br>
+    <input type="text" name="price" placeholder="Enter Price"><br>
+    <label for="file-ip-1" title="click here to insert photo">add photo</label>
+     <input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
+    <input type="submit" name="update" value="Update">
+	</div>
+
+</form>
+<script type="text/javascript">
+  function showPreview(event){
+  if(event.target.files.length > 0){
+    var src = URL.createObjectURL(event.target.files[0]);
+    var preview = document.getElementById("image");
+    preview.src = src;
+    preview.style.display = "block";
+  }
+}
+</script>
+
+</script>
+
+  </body>
+  </html>

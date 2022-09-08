@@ -8,10 +8,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
-<link rel="stylesheet" href="../item_details.css">
-<link rel="stylesheet" href="../profile.css">
+<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./node_modules/profile.css">
 <style>
 .w3-sidebar a {font-family: "Roboto", sans-serif}
 body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
@@ -23,13 +22,16 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 }
 .img {
   border: 5px solid #CEAB93;
+  
 }
+
+
 </style>
 </head>
 <body class="w3-content" style="max-width:2000px">
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-bar-block w3-light-grey w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+<nav class="w3-sidebar w3-bar-block w3-text-black w3-light-grey w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
   <div class="w3-container w3-display-container w3-padding-16">
     <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
     <h3 class="w3-wide" style="position:relative; top:7px"><b>LOGO</b></h3>
@@ -37,11 +39,12 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <div class=" w3-large w3-text-black" style="font-weight:bold">
     <a href="buy with(shop).html" class="w3-bar-item w3-button">Birthday Cakes</a>
     <a href="cupcakes.html" class="w3-bar-item w3-button">Cupcakes</a>
-    <a href="desserts.html" class="w3-bar-item w3-button w3-pink">Desserts</a>
+    <a href="desserts.html" class="w3-bar-item w3-button">Desserts</a>
     <a href="macrons.html" class="w3-bar-item w3-button">Macrons</a>
-    <a href="toppers.html" class="w3-bar-item w3-button">Toppers</a>
+    <a href="toppers.html" class="w3-bar-item w3-button w3-pink">Toppers</a>
    
   </div>
+  
   <a href="#footer"  class="w3-bar-item w3-button w3-padding"></a>
 </nav>
 
@@ -60,21 +63,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <!-- Push down content on small screens -->
   <div class="w3-hide-large" style="margin-top:83px"></div>
   
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 
 
 
@@ -172,7 +161,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
   <div class="dropdown" style="margin-right: 243px;">
     <a class=" d-block" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      <div class=" ms-5 dropdown" style="border-radius: 50%; background-image:url(../cake\ girl.jpg); width: 40px; height: 40px; background-size: contain;">  </div> 
+      <div class=" ms-5 dropdown" style="border-radius: 50%; background-image:url(./shop\ page/cakegirl.jpg); width: 40px; height: 40px; background-size: contain;">  </div> 
     </a>
     <ul class="dropdown-menu" style="margin-left: -66px;">
       <li><a class="dropdown-item" href="#">Action</a></li>
@@ -217,62 +206,62 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 </div>
 </div>
 
+
+
 <!-- profile offcanvas here -->
 <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel" style="z-index: 6000;">
-  <div class="offcanvas-header cv">
-    <h5 class="offcanvas-title " id="offcanvasWithBothOptionsLabel">My Profile</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body main">
-    
-      
-    
-    <img src="../cake girl.jpg" style="margin:auto ;" class=" mb-5 p-img"><br>
-    
-      
-      
-      <table style="margin: auto;" class=" mb-5">
-        <tr><th><label>Name</label></th>
-          <td>
-      Marry</td>
-      </tr>
-  
-      <tr><th><label>E-mail</label></th>
-        <td>
-      marry@gmail.com</td>
-      </tr>
-  
-      <tr><th><label>Phone No.</label></th>
-        <td>
-      +95 7345260</td>
-      </tr>
-  
-      <tr><th><label>Address</label></th>
-        <td>Blah Blah
-      </td>
-      </tr>
-  
-      <tr><th><label>Favourites</label></th>
-        <td>
-      <input  type="button" name="fav" value="view">
-      </td>
-      </tr>
-  
-      <tr><th><label>Points</label></th>
-        <td>
-      50</td>
-      </tr></table>
-      <table class="buttons">
-      </table>
-  
-      <span style="margin: auto;"><input type="button" name="edit" value="Edit">
-    <input type="button" name="back" value="Back"></span>
-    
-    
-  </div>
+<div class="offcanvas-header cv">
+<h5 class="offcanvas-title " id="offcanvasWithBothOptionsLabel">My Profile</h5>
+<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 </div>
+<div class="offcanvas-body main">
+
+  
+
+<img src="./shop page/cakegirl.jpg" style="margin:auto ;" class=" mb-5 p-img"><br>
+
+  
+  
+  <table style="margin: auto;" class=" mb-5">
+    <tr><th><label>Name</label></th>
+      <td>
+  Marry</td>
+  </tr>
+
+  <tr><th><label>E-mail</label></th>
+    <td>
+  marry@gmail.com</td>
+  </tr>
+
+  <tr><th><label>Phone No.</label></th>
+    <td>
+  +95 7345260</td>
+  </tr>
+
+  <tr><th><label>Address</label></th>
+    <td>Blah Blah
+  </td>
+  </tr>
+
+  <tr><th><label>Favourites</label></th>
+    <td>
+  <input  type="button" name="fav" value="view">
+  </td>
+  </tr>
+
+  <tr><th><label>Points</label></th>
+    <td>
+  50</td>
+  </tr></table>
+  <table class="buttons">
+  </table>
+
+  <span style="margin: auto;"><input type="button" name="edit" value="Edit">
+<input type="button" name="back" value="Back"></span>
 
 
+</div>
+</div>
 
 
 <br><br>
@@ -296,21 +285,16 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
 
 
-
-
-
-
-
   <!-- Image header -->
   <div class="w3-display-container w3-container w3-black">
-    <img src="shop.jpg" alt="Cake" style="width:100%" class="name">
+    <img src="./shop page/shop.jpg" alt="Cake" style="width:100%" class="name">
     <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
       <h1 class="w3-jumbo w3-hide-small">Shop Name</h1>
       <h1 class="w3-hide-large w3-hide-medium">Shop Name</h1>
       <h1 class="w3-hide-small">fsdklfsdfnsmf</h1>
     </div>
   </div>
-   <h1 style="font-family:Georgia; color:#B82C54">Desserts</h1>
+   <h1 style="font-family:Georgia; color:#B82C54">Birthday Cakes</h1>
   
 
   <!-- Product grid -->
@@ -318,170 +302,170 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <div class="w3-col l3 s6">
       <div class="w3-container">
         <div class="w3-display-container">
-        <img src="desserts1.jpg" class="img" style="width:100%">
+        <img src="./shop page/toppers1.jpg" class="img"  style="width:100%">
          <div class="w3-display-middle w3-display-hover ">
-            <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart"></i></button>
+            <button class="w3-button w3-pink">Add to cart<i class="fa fa-shopping-cart"></i></button>
           </div>
       </div>
-        <p><b>Dessert1</b><br><b>3000MMK</b></p>
+        <p><b>Topper1</b><br><b>1000MMK</b></p>
       </div>
       <div class="w3-container">
         <div class="w3-display-container">
-        <img src="desserts2.jpg" class="img" style="width:100%">
+        <img src="./shop page/toppers2.jpg" class="img" style="width:100%">
         <div class="w3-display-middle w3-display-hover">
-            <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart "></i></button>
+            <button class="w3-button w3-pink">Add to cart<i class="fa fa-shopping-cart "></i></button>
           </div>
       </div>
-        <p><b>Dessert2</b><br><b>2200MMK</b></p>
+        <p><b>Topper2</b><br><b>650MMK</b></p>
       </div>
   
      <div class="w3-container">
         <div class="w3-display-container">
-          <img src="desserts3.jpg" class="img" style="width:100%">
+          <img src="./shop page/toppers3.jpg" class="img" style="width:100%">
           <div class="w3-display-middle w3-display-hover">
-            <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart "></i></button>
+            <button class="w3-button w3-pink">Add to cart<i class="fa fa-shopping-cart "></i></button>
           </div>
         </div>
-        <p><b>Dessert3</b><br><b>3500MMK</b></p>
+        <p><b>Topper3</b><br><b>750MMK</b></p>
       </div>
     
       <div class="w3-container">
          <div class="w3-display-container">
-         <img src="desserts4.jpg" class="img" style="width:100%">
+         <img src="./shop page/toppers4.jpg" class="img" style="width:100%">
+          <span class="w3-tag w3-display-topleft w3-yellow">New</span>
           <div class="w3-display-middle w3-display-hover">
             <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart "></i></button>
           </div>
        </div>
-        <p><b>Dessert4</b><br><b>4000MMK</b></p>
+        <p><b>Topper4</b><br><b>1000MMK</b></p>
       </div>
     </div>
 
      <div class="w3-col l3 s6">  
       <div class="w3-container">
         <div class="w3-display-container">
-        <img src="desserts5.jpg" class="img" style="width:100%">
-        <span class="w3-tag w3-display-topleft w3-yellow">New</span>
+        <img src="./shop page/toppers5.jpg" class="img" style="width:100%">
           <div class="w3-display-middle w3-display-hover">
             <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart "></i></button>
           </div>
       </div>
-        <p><b>Dessert5</b><br><b>2500MMK</b></p>
+        <p><b>Topper5</b><br><b>800MMK</b></p>
       </div>
       
       <div class="w3-container">
         <div class="w3-display-container">
-        <img src="desserts6.jpg" class="img" style="width:100%">
+        <img src="./shop page/toppers6.jpg" class="img" style="width:100%">
           <div class="w3-display-middle w3-display-hover">
-            <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart"></i></button>
+            <button class="w3-button w3-pink">Add to cart<i class="fa fa-shopping-cart"></i></button>
           </div>
       </div>
-        <p><b>Dessert6</b><br><b class="w3-text-black">2200MMK</b></p>
+        <p><b>Topper6</b><br><b class="w3-text-black">500MMK</b></p>
       </div>
   
       <div class="w3-container">
         <div class="w3-display-container">
-        <img src="desserts7.jpg" class="img" style="width:100%">
+        <img src="./shop page/toppers7.jpg" class="img" style="width:100%">
           <div class="w3-display-middle w3-display-hover">
             <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart "></i></button>
           </div>
       </div>
-        <p><b>Dessert7</b><br><b class="w3-text-black">3000MMK</b></p>
+        <p><b>Topper7</b><br><b class="w3-text-black">650MMK</b></p>
       </div>
 
       <div class="w3-container">
        <div class="w3-display-container">
-        <img src="desserts8.jpg" class="img" style="width:100%">
+        <img src="./shop page/toppers8.jpg" class="img" style="width:100%">
           <div class="w3-display-middle w3-display-hover">
             <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart "></i></button>
           </div>
       </div>
-        <p><b>Dessert8</b><br><b>3100MMK</b></p>
+        <p><b>Topper8</b><br><b>500MMK</b></p>
       </div>
     </div>
 
     <div class="w3-col l3 s6">
       <div class="w3-container">
         <div class="w3-display-container">
-        <img src="desserts9.jpg" class="img" style="width:100%">
+        <img src="./shop page/toppers9.jpg" class="img" style="width:100%">
           <div class="w3-display-middle w3-display-hover">
             <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart "></i></button>
           </div>
       </div>
-        <p><b>Dessert9</b><br><b class="w3-text-black">2500MMK</b></p>
+        <p><b>Topper9</b><br><b class="w3-text-black">450MMK</b></p>
       </div>
    
       <div class="w3-container">
         <div class="w3-display-container">
-        <img src="desserts10.jpg" class="img" style="width:100%">
+        <img src="./shop page/toppers10.jpg" class="img" style="width:100%">
+        <span class="w3-tag w3-display-topleft w3-yellow">New</span>
           <div class="w3-display-middle w3-display-hover">
             <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart "></i></button>
           </div>
       </div>
-        <p><b>Dessert10</b><br><b class="w3-text-black">3500MMK</b></p>
+        <p><b>Topper10</b><br><b class="w3-text-black">700MMK</b></p>
       </div>
 
       <div class="w3-container">
         <div class="w3-display-container">
-        <img src="desserts11.jpg" class="img" style="width:100%">
-         <span class="w3-tag w3-display-topleft w3-yellow">New</span>
+        <img src="./shop page/toppers11.jpg" class="img" style="width:100%">
           <div class="w3-display-middle w3-display-hover">
             <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart"></i></button>
           </div>
       </div>
-        <p><b>Dessert11</b><br><b class="w3-text-black">3000MMK</b></p>
+        <p><b>Topper11</b><br><b class="w3-text-black">400MMK</b></p>
       </div>
     
       <div class="w3-container">
         <div class="w3-display-container">
-        <img src="desserts12.jpg" class="img" style="width:100%">
+        <img src="./shop page/toppers12.jpg" class="img" style="width:100%">
           <div class="w3-display-middle w3-display-hover">
             <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart "></i></button>
           </div>
          </div>
-        <p><b>Dessert12</b>Cake12<br><b class="w3-text-black">2500MMK</b></p>
+        <p><b>Topper12</b><br><b class="w3-text-black">650MMK</b></p>
       </div>
     </div>
 
      <div class="w3-col l3 s6">
       <div class="w3-container">
         <div class="w3-display-container">
-        <img src="desserts13.jpg" class="img" style="width:100%">
+        <img src="./shop page/toppers13.jpg" class="img" style="width:100%">
           <div class="w3-display-middle w3-display-hover">
             <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart "></i></button>
           </div>
       </div>
-        <p><b>Dessert13</b><br><b class="w3-text-black">3000MMK</b></p>
+        <p><b>Topper13</b><br><b class="w3-text-black">800MMK</b></p>
       </div>
    
       <div class="w3-container">
         <div class="w3-display-container">
-        <img src="desserts14.jpg" class="img" style="width:100%">
+        <img src="./shop page/toppers14.jpg" class="img" style="width:100%">
         <span class="w3-tag w3-display-topleft w3-yellow">New</span>
           <div class="w3-display-middle w3-display-hover">
-            <button class="w3-button w3-pink">Add to cart<i class="fa fa-shopping-cart "></i></button>
+            <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart "></i></button>
           </div>
       </div>
-        <p><b>Dessert14</b><br><b class="w3-text-black">2500MMK</b></p>
+        <p><b>Topper14</b><br><b class="w3-text-black">900MMK</b></p>
       </div>
 
       <div class="w3-container">
         <div class="w3-display-container">
-        <img src="desserts15.jpg" class="img" style="width:100%">
+        <img src="./shop page/toppers15.jpg" class="img" style="width:100%">
           <div class="w3-display-middle w3-display-hover">
             <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart"></i></button>
           </div>
       </div>
-        <p><b>Dessert15</b><br><b class="w3-text-black">3000MMK</b></p>
+        <p><b>Topper15</b><br><b class="w3-text-black">700MMK</b></p>
       </div>
     
       <div class="w3-container">
         <div class="w3-display-container">
-        <img src="desserts16.jpg" class="img" style="width:100%">
+        <img src="./shop page/toppers16.jpg" class="img" style="width:100%">
           <div class="w3-display-middle w3-display-hover">
             <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart "></i></button>
           </div>
          </div>
-        <p><b>Dessert16</b><br><b class="w3-text-black">4000MMK</b></p>
+        <p><b>Topper16</b><br><b class="w3-text-black">800MMK</b></p>
       </div>
     </div>
   </div>
@@ -532,7 +516,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
 <script src="../item_details.js"></script>
 
-<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 <script>
 // Accordion 
 function myAccFunc() {
