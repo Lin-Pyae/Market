@@ -2,12 +2,12 @@ let i = document.getElementById("quantity");
 let thumbnail = document.querySelectorAll(".thumbnail");
 let mainImg = document.getElementsByClassName("main-img")[0];
 let cartItems = document.getElementById("cart_items");
-let addtoCart = document.getElementById("addtoCart");
+// let addtoCart = document.getElementById("addtoCart");
 let cartBody = document.getElementById("cart-body");
 let order_submit = document.getElementById("order-submit");
 
-let product_name = document.getElementById("product-name").innerText;
-let product_price = document.getElementById("product_price").innerText;
+// let product_name = document.getElementById("product-name").innerText;
+// let product_price;
 
 let finalTotal = document.getElementById("finalTotal");
 
@@ -42,16 +42,17 @@ thumbnail.forEach(function(x){
 
 //quantity change
 
-function increase(){
- i.innerHTML = parseInt (i.innerHTML)+1;
+function increase(e){
+  e.parentNode.querySelector(".quantity").innerText = parseInt (e.parentNode.querySelector(".quantity").innerText)+1;
+ console.log(e.parentNode.querySelector(".quantity").innerText);
 }
 
-function decrease(){ 
- if(parseInt(i.innerHTML) <= 0){
-   i.innerHTML = 0;
+function decrease(e){ 
+ if(parseInt(e.parentNode.querySelector(".quantity").innerText) <= 0){
+  e.parentNode.querySelector(".quantity").innerText = 0;
  }
  else{
-   i.innerHTML = parseInt (i.innerHTML)-1;
+  e.parentNode.querySelector(".quantity").innerText = parseInt (e.parentNode.querySelector(".quantity").innerText)-1;
  }
 
 }
@@ -59,11 +60,15 @@ function decrease(){
 
 //add to cart 
 
-addtoCart.addEventListener('click',(e)=>{
+function addtoCart(e){
   // add to cart
   quantity_on_cart = parseInt(cartItems.innerText);
-  let quantity = parseInt(i.innerHTML)
+  let product_name = e.parentNode.parentNode.parentNode.querySelector(".product-name").innerText;
+  let product_price = e.parentNode.parentNode.parentNode.querySelector(".product_price").innerText;
+  let quantity = parseInt(e.parentNode.parentNode.parentNode.querySelector(".quantity").innerText);
+  console.log(e.parentNode.parentNode.parentNode.querySelector(".quantity").innerText);
   
+
   if(quantity === 0){
     cartItems.innerText= quantity_on_cart + quantity;
   }
@@ -78,7 +83,7 @@ addtoCart.addEventListener('click',(e)=>{
 
     for (const x of product_nameIn_cart) {
       if(product_name === x.innerHTML){
-        x.parentNode.parentNode.querySelector(".quan").value = parseInt(x.parentNode.parentNode.querySelector(".quan").value) + parseInt(i.innerText);
+        x.parentNode.parentNode.querySelector(".quan").value = parseInt(x.parentNode.parentNode.querySelector(".quan").value) + parseInt(quantity);
         x.parentNode.parentNode.querySelector(".total").innerHTML = parseInt(x.parentNode.parentNode.querySelector(".quan").value) * parseInt(product_price);
         calTotal();
         return;
@@ -86,7 +91,7 @@ addtoCart.addEventListener('click',(e)=>{
     }
 
    
-    console.log("Hello World");
+    
     div.classList.add("d-flex","justify-content-around","my-3", "displayDel");
     div.innerHTML = `            
                                 <div>
@@ -96,23 +101,71 @@ addtoCart.addEventListener('click',(e)=>{
                                 </div>                               
                                 </div> 
 
-                                <div>${ parseInt(product_price)}</div>
+                                <div class="priceIncart">${ parseInt(product_price)}</div>
 
                                 <div>                        
-                                <input class="quan" type="number" min="0" value="${parseInt(i.innerText)}" onclick="quan(this)"/>
+                                <input class="quan" type="number" min="0" value="${parseInt(quantity)}" onclick="quan(this)"/>
                                 </div>
 
-                                <div class="total">${parseInt(product_price)*parseInt(i.innerText)}</div>
+                                <div class="total">${parseInt(product_price)*parseInt(quantity)}</div>
                             `;
                             order_submit.append(div); 
                             
   calTotal();
   
-
+  
+  
   }
   
   
-})
+}
+
+//get items in the cart from local storage
+// window.onload = ()=>{
+  // let product =  localStorage.getItem("product");
+  // product.forEach((x)=>{
+  //   let div = document.createElement("div");
+  //   div.classList.add("d-flex","justify-content-around","my-3", "displayDel");
+  //   div.innerHTML = `            
+  //                               <div>
+  //                              <div class="product_nameIn_cart">${x}</div>
+  //                               <div class="delcontainer">
+  //                               <button class=" btn btn-sm btn-danger" onclick="cancel(this)">Cancel</button>
+  //                               </div>                               
+  //                               </div> 
+  
+  //                               <div class="priceIncart">test</div>
+  
+  //                               <div>                        
+  //                               <input class="quan" type="number" min="0" value="2" onclick="quan(this)"/>
+  //                               </div>
+  
+  //                               <div class="total">10</div>
+  //                           `;
+  //                           order_submit.append(div); 
+  // })
+  // console.log("hello from cupcake");
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //order cancel
@@ -139,7 +192,10 @@ function calTotal(){
 function quan(e){
   let parent = e.parentNode.parentNode;
   let child = parent.querySelector(".total");
-  child.innerText =  parseInt(e.value) * parseInt(product_price);
+  
+  let price = parent.querySelector(".priceIncart").innerText;
+  console.log(price);
+  child.innerText =  parseInt(e.value) * parseInt(price);
 
   let allQ =   e.parentNode.parentNode.parentNode.querySelectorAll(".quan");
   
@@ -148,6 +204,9 @@ function quan(e){
  
    calTotal();
 }
+
+
+
 
 
 

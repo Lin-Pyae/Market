@@ -11,6 +11,8 @@
 <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
 <link rel="stylesheet" href="./node_modules/profile.css">
+<link rel="stylesheet" href="./node_modules/item_details.css">
+
 <style>
 .w3-sidebar a {font-family: "Roboto", sans-serif}
 body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
@@ -25,7 +27,34 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   
 }
 
+.w3-display-container img{
+  height: 280px;
+  object-fit:cover;
+}
+.footer{
+  background-color: #f1f1f1!important;
+  margin-top: 0px;
+    padding-top: 60px;
+}
+.sidebar_item{
+  margin-bottom: 0px;
+  height: 70px;
+  
+}
 
+
+
+.w3-large .sidebar_item{
+  text-align: center;
+    line-height: 54px;
+    border-bottom: 2px solid rgb(51 51 51 / 13%);;
+
+    transition: 0.5s;
+}
+
+w3-large a.topper:hover{
+  color: black!important;
+}
 </style>
 </head>
 <body class="w3-content" style="max-width:2000px">
@@ -36,12 +65,12 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
     <h3 class="w3-wide" style="position:relative; top:7px"><b>LOGO</b></h3>
   </div>
-  <div class=" w3-large w3-text-black" style="font-weight:bold">
-    <a href="buy with(shop).html" class="w3-bar-item w3-button">Birthday Cakes</a>
-    <a href="cupcakes.html" class="w3-bar-item w3-button">Cupcakes</a>
-    <a href="desserts.html" class="w3-bar-item w3-button">Desserts</a>
-    <a href="macrons.html" class="w3-bar-item w3-button">Macrons</a>
-    <a href="toppers.html" class="w3-bar-item w3-button w3-pink">Toppers</a>
+  <div class=" w3-large w3-text-black w3-light-grey" style="font-weight:bold; padding-top:3px">
+    <a href="buy with(shop).html" class="w3-bar-item w3-button w3-pink sidebar_item" style="background-color: #f1f1f1!important;color: black!important;">Birthday Cakes</a>
+    <a href="cupcakes.html" class="w3-bar-item w3-button sidebar_item">Cupcakes</a>
+    <a href="desserts.html" class="w3-bar-item w3-button sidebar_item">Desserts</a>
+    <a href="macrons.html" class="w3-bar-item w3-button sidebar_item">Macrons</a>
+    <a href="toppers.html" class="w3-bar-item w3-button sidebar_item topper" style="background-color: #e91e63;color:white;">Toppers</a>
    
   </div>
   
@@ -94,16 +123,16 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
           Home
         </a>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" href="#">Shop</a>
-      </li>     
+      </li>      -->
     </ul>
     <form class="d-flex ms-lg-5" role="search">
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="search" type="submit">Search</button>
+      <button class="search btn btn-secondary" type="submit"><i class="bi bi-search"></i></button>
     </form>  
 
-    <div class=" d-flex align-items-center ms-sm-5 d-lg-none">      
+    <!-- <div class=" d-flex align-items-center ms-sm-5 d-lg-none">      
       <button type="button" class="btn  position-relative"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
         <i class="bi bi-cart3 align-self-center" style="font-size:30px;"></i>
         <span class="position-absolute  start-100 translate-middle badge rounded-pill bg-danger" style="top: 17px;" id="cart_items">
@@ -120,7 +149,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
           <li><a class="dropdown-item" href="#">Something else here</a></li>
         </ul>
       </div>
-     </div>
+     </div> -->
 
     </div>
   </div>
@@ -287,7 +316,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
   <!-- Image header -->
   <div class="w3-display-container w3-container w3-black">
-    <img src="./shop page/shop.jpg" alt="Cake" style="width:100%" class="name">
+    <img src="./shop page/shop.jpg" alt="Cake" style="width:100%;height:100%;" class="name">
     <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
       <h1 class="w3-jumbo w3-hide-small">Shop Name</h1>
       <h1 class="w3-hide-large w3-hide-medium">Shop Name</h1>
@@ -300,23 +329,45 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <!-- Product grid -->
   <div class="w3-row ">
     <div class="w3-col l3 s6">
+
       <div class="w3-container">
         <div class="w3-display-container">
         <img src="./shop page/toppers1.jpg" class="img"  style="width:100%">
          <div class="w3-display-middle w3-display-hover ">
-            <button class="w3-button w3-pink">Add to cart<i class="fa fa-shopping-cart"></i></button>
+          <button class="w3-button w3-pink" id="addtoCart" onclick="addtoCart(this)">Add to cart <i class="fa fa-shopping-cart "></i></button>
           </div>
       </div>
-        <p><b>Topper1</b><br><b>1000MMK</b></p>
+      <div style="margin-bottom: 16px; display: flex; justify-content: space-between;">
+        <div><b class="product-name">Topper1</b><br><b class="product_price">1000</b></div>
+        <div>
+          <div id="quantity_container" class=" col-4 align-self-center">
+          <button onclick="decrease(this)" class="quantity_items dbtn" id="dbtn" style="border:none;"><i class="bi bi-dash fs-5 fw-bolder"></i></button>
+          <label id="quantity" class="quantity_items quantity">0</label>
+          <button onclick="increase(this)" class="quantity_items ibtn" id="ibtn" style="border:none;"><i class="bi bi-plus fs-5 fw-bolder"></i></button>
+        </div>
       </div>
+      </div>
+      </div>
+
+
+
       <div class="w3-container">
         <div class="w3-display-container">
-        <img src="./shop page/toppers2.jpg" class="img" style="width:100%">
-        <div class="w3-display-middle w3-display-hover">
-            <button class="w3-button w3-pink">Add to cart<i class="fa fa-shopping-cart "></i></button>
+        <img src="./shop page/toppers2.jpg" class="img"  style="width:100%">
+         <div class="w3-display-middle w3-display-hover ">
+          <button class="w3-button w3-pink" id="addtoCart" onclick="addtoCart(this)">Add to cart <i class="fa fa-shopping-cart "></i></button>
           </div>
       </div>
-        <p><b>Topper2</b><br><b>650MMK</b></p>
+      <div style="margin-bottom: 16px; display: flex; justify-content: space-between;">
+        <div><b class="product-name">Topper2</b><br><b class="product_price">650</b></div>
+        <div>
+          <div id="quantity_container" class=" col-4 align-self-center">
+          <button onclick="decrease(this)" class="quantity_items dbtn" id="dbtn" style="border:none;"><i class="bi bi-dash fs-5 fw-bolder"></i></button>
+          <label id="quantity" class="quantity_items quantity">0</label>
+          <button onclick="increase(this)" class="quantity_items ibtn" id="ibtn" style="border:none;"><i class="bi bi-plus fs-5 fw-bolder"></i></button>
+        </div>
+      </div>
+      </div>
       </div>
   
      <div class="w3-container">
@@ -417,7 +468,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     
       <div class="w3-container">
         <div class="w3-display-container">
-        <img src="./shop page/toppers12.jpg" class="img" style="width:100%">
+        <img src="./shop page/toppers1.jpg" class="img" style="width:100%">
           <div class="w3-display-middle w3-display-hover">
             <button class="w3-button w3-pink">Add to cart <i class="fa fa-shopping-cart "></i></button>
           </div>
@@ -471,51 +522,48 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   </div>
    
   <!-- Footer -->
-  <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
-    <div class="w3-row-padding" style="display:flex; justify-content:space-between;" >
-      <div class="w3-col s4">
-        <h4>Contact</h4>
-        <p>Questions or review?</p>
-        <form action="/action_page.php" target="_blank">
-          <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Username" required></p>
-          <p><input class="w3-input w3-border" type="text" placeholder="Review" name="Review" required></p>
-          <button type="submit" class="w3-button w3-block w3-pink">Send</button>
-        </form>
-      </div>
+  <footer  class="footer">
+    <div class="container">
+      <div class="row ">
 
-      
+        <div class="col-4 ">
+          <h4>Contact</h4>
+          <p>Questions or review?</p>
+          <form action="/action_page.php" target="_blank">
+            <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Username" required></p>
+            <p><input class="w3-input w3-border" type="text" placeholder="Review" name="Review" required></p>
+            <button type="submit" class="w3-button w3-block w3-pink">Send</button>
+          </form>
+        </div>
+        <div class="col-1"></div>
 
-      <div class="" style="text-align:left ;">
-        <h4>Store</h4>
-        <p><i class="fa fa-fw fa-map-marker w3-pink"></i><b>Company Name</b> </p>
-        <p><i class="fa fa-fw fa-phone w3-pink"></i><b> 00000000</b></p>
-        <p><i class="fa fa-fw fa-envelope w3-pink"></i> <b>shopname@gmail.com</b></p>
-        <h4>We accept</h4>
-        <p><i class="fa fa-fw fa-cc-amex w3-pink"></i>Cash on delivery</p>
-        <br>
-        <i class="fa fa-facebook w3-hover-opacity w3-large w3-pink"></i>
-        <i class="fa fa-instagram w3-hover-opacity w3-large w3-pink"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-pink"></i>
-        <i class="fa fa-twitter w3-hover-opacity w3-large w3-pink"></i>
-        
-      </div>
-
-      <div class="w3-col s4" >
-        <iframe style="height:300px"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.60087037723!2d96.12323221434625!3d16.84614532262384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c194e9ed66de9d%3A0xaba8dc0947f34754!2sACE%20Inspiration!5e0!3m2!1sen!2smm!4v1662578895432!5m2!1sen!2smm" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="col-3">
+          <h4>Store</h4>
+          <p><i class="fa fa-fw fa-map-marker w3-pink"></i><b>Company Name</b> </p>
+          <p><i class="fa fa-fw fa-phone w3-pink"></i><b> 00000000</b></p>
+          <p><i class="fa fa-fw fa-envelope w3-pink"></i> <b>shopname@gmail.com</b></p>
+          <h4>We accept</h4>
+          <p><i class="fa fa-fw fa-cc-amex w3-pink"></i>Cash on delivery</p>
+          <br>
+          <i class="fa fa-facebook w3-hover-opacity w3-large w3-pink"></i>
+          <i class="fa fa-instagram w3-hover-opacity w3-large w3-pink"></i>
+          <i class="fa fa-pinterest-p w3-hover-opacity w3-large w3-pink"></i>
+          <i class="fa fa-twitter w3-hover-opacity w3-large w3-pink"></i>
         </div>
 
-    </div>
+        <div class="col-4">
+          <iframe style="height:300px"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.60087037723!2d96.12323221434625!3d16.84614532262384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c194e9ed66de9d%3A0xaba8dc0947f34754!2sACE%20Inspiration!5e0!3m2!1sen!2smm!4v1662578895432!5m2!1sen!2smm" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
 
-   
+      </div>
     </div>
-  </footer>
+</footer>
  </div>
  
 
 <!-- Newsletter Modal -->
 
-<script src="../item_details.js"></script>
-
+<script src="./item_details.js"></script>
 <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 <script>
 // Accordion 

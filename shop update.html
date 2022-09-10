@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="./node_modules/shop_update2.css">
+  <title>Upload Item</title></head>
+  <body>
+  	
+<form>
+	<div class="box">
+    <div class="homeBtn"><a href="Admin Dashboard.html"><img src="./shop page/home icon.png" title="Go to home page"></a></div>
+		<img id="image" style="width: 200px;height: 200px;background-image: url(./shop\ page/icon.png);background-size: cover;border:none;" ><br>
+	<input type="text" name="product_name" placeholder="Enter Product Name" required="required"><br>
+
+<div class="checkBox">
+<div class="form-control">
+  <input type="checkbox" name="category" id="birthday" name="birthdayCake" value="birthdayCake">
+Birthday Cake </div>
+
+<div class="form-control" >
+  <input type="checkbox" name="category" id="cupcake" name="cupCake" value="cupCake">
+Cupcake
+  </div>
+
+<div class="form-control">
+  <input type="checkbox" name="category" id="macrons" name="macrons" value="macrons">
+Macrons
+  </div>
+
+<div class="form-control">
+  <input type="checkbox" name="category" id="dessert" name="dessert" value="dessert">
+Desserts
+  </div>
+
+<div class="form-control">
+  <input type="checkbox" name="category" id="topper" name="topper" value="topper">
+Toppers
+  <br>
+  </div>
+  </div>
+
+    <input type="text" name="color" placeholder="Enter color" required="required"><br>
+
+    <input type="text" name="size" placeholder="Enter size(inches)" required="required"><br>
+
+
+    <input type="text" name="topping" placeholder="Enter Topping" required="required">
+    <br>
+
+    <input type="text" name="flavour" placeholder="flavour" required="required"><br>
+
+  
+    <input type="text" name="qty" placeholder="Enter QTY" required="required"><br>
+
+    <input type="text" name="price" placeholder="Enter Price" required="required"><br>
+
+<input type="date" name="add_date" placeholder="Enter current date" required="required"><br>
+
+  <textarea id="description" name="description" rows="4" cols="50" placeholder="Enter description" required="required"></textarea>
+  <br>
+
+    <label for="file-ip-1" title="click here to insert photo">add photo</label>
+     <input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);" required="required">
+
+
+     <!---<div class="submit"><div class="submitBtn">--->
+      <input type="submit" name="submit" class="submitBtn" value="Add">
+   <!---<a href="index.html" > Add</a></div></div>--->
+  
+	</div>
+
+</form>
+<script type="text/javascript">
+  function showPreview(event){
+  if(event.target.files.length > 0){
+    var src = URL.createObjectURL(event.target.files[0]);
+    var preview = document.getElementById("image");
+    preview.src = src;
+    preview.style.display = "block";
+  }
+}
+</script>
+
+</script>
+
+  </body>
+  </html>
