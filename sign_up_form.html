@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./node_modules/sign_up.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+        .bi-eye{
+            position: relative;
+            left: 184px;
+            bottom: 28px;
+            font-size: 20px;
+        }
+
+        input[type="submit"]{
+            position: relative;
+            bottom: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="main">
+        <div class="logo-container">
+            <label class="logo-label">Sign Up</label>
+            <img src="./shop page/cakegirl.jpg" alt="Avatar" class="logo">
+        </div>
+
+        <form action="" id="loginform" class="form">
+
+            <div class="label" style="margin-left: -296px;">User Name  </div>
+            <input class="form_input" type="text" placeholder="Email or Username" name="userName" required>
+       
+            <div class="label" style="margin-left: -338px;">Email </div>
+            <input class="form_input" type="email" name="email" required>
+
+            <div class="label" style="margin-left: -270px;">Phone Number </div>
+            <input class="form_input" type="tel" id="phone" name="phone" placeholder="123-45-678"
+                pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+
+            <div class="label" style="margin-left: -320px;">Address </div>
+            <input class="form_input" type="text" name="address" required>
+
+            <div class="label" style="margin-left: -313px">Password </div>
+            <input id="pw" class="form_input" type="password" name="password" required>
+            <i class="bi bi-eye" id="pwIcon"></i>
+
+            <div class="label" style="margin-left: -255px">Confirm Password </div>
+            <input id="cpw" class="form_input" type="password" name="confirmpassword" required>
+            <i class="bi bi-eye" id="confirmpwIcon"></i>
+
+            <input class="button" type="submit" value="Sign Up" id="submit">
+        </form>
+    </div>
+
+    <script>
+
+        //confirm password
+        let pw = document.getElementById("pw");
+        let cpw = document.getElementById("cpw");
+        let submit = document.getElementById("submit");
+
+        function validatePassword() {
+            if (pw.value != cpw.value) {
+                cpw.setCustomValidity("Passwords Don't Match");
+            }
+            else {
+                cpw.setCustomValidity('');
+            }
+        }
+
+        pw.onchange = validatePassword;
+        cpw.onkeyup = validatePassword;
+
+
+        //password visiility
+
+        let pwIcon = document.getElementById("pwIcon");
+        let confirmpwIcon = document.getElementById("confirmpwIcon");
+        pwIcon.addEventListener('click', () => {
+            if (pw.type === "password") {
+                pw.type = "text";
+            }
+            else {
+                pw.type = "password";
+            }
+        });
+
+        confirmpwIcon.addEventListener('click', () => {
+            if (cpw.type === "password") {
+                cpw.type = "text";
+            }
+            else {
+                cpw.type = "password";
+            }
+        })
+    </script>
+</body>
+
+</html>
